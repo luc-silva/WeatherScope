@@ -1,0 +1,40 @@
+.weather-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    padding-right: 3rem;
+    padding-left: 3rem;
+    width: 100%;
+
+    border-bottom: 1px solid whitesmoke;
+    animation-name: fade-in;
+    animation-duration: 0.8s;
+}
+.weather-card:hover {
+    background-color: whitesmoke;
+}
+.weather-card-city {
+    color: rgb(57, 57, 57);
+}
+.weather-card-status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+.weather-card-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+
+    color: black;
+    font-weight: bold;
+}
+.weather-card-condition {
+    display: flex;
+    align-items: center;
+}
+

@@ -1,0 +1,54 @@
+.main-container {
+    color: rgb(55, 55, 55);
+}
+.weather-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+.weather-city-container-card {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 50vh;
+    padding: 1rem 3rem;
+
+    background-color: white;
+    border-bottom: 1px solid whitesmoke;
+    box-sizing: border-box;
+
+    animation-name: fade-in;
+    animation-duration: 0.8s;
+}
+.weather-city-container-info {
+    display: flex;
+    flex-direction: column;
+
+    width: 55%;
+    font-size: 1.2rem;
+}
+.weather-city-container-info-stts {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+}
+.weather-city-container-info > h2 {
+    font-size: 1.3rem;
+}
+.weather-city-container-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+}
+.weather-city-container-img > img {
+    width: 12rem;
+    height: 12rem;
+    filter: none;
+}
+.weather-city-container-img > h3 {
+    font-size: 3rem;
+}

@@ -1,0 +1,31 @@
+.clock-search-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+    align-items: center;
+  
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 5px -5px rgb(0 0 0 / 25%);
+  }
+  .search-container{
+  
+    display: flex;
+    gap: 2rem;
+    width: 80%;
+  }
+  .search-container > input{
+    width: 60%;
+    padding: 0.5rem;
+    background-color: whitesmoke;
+  
+  }
+  .search-container > button{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: whitesmoke;
+  }
+  .weather-clock{
+    font-size: 1.4rem;
+  }

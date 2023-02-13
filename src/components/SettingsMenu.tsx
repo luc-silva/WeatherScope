@@ -1,6 +1,8 @@
+import styles from "./SettingsMenu.module.css"
+
 export const SettingsMenu = () => {
     return (
-        <div id="settings-container">
+        <div className={styles["settings-container"]}>
             <h2>Settings</h2>
             <div>
                 default city
