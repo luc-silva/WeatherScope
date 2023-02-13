@@ -74,11 +74,6 @@ let weatherApp = (async function () {
 		}
 	};
 
-	let checkCity = function () {
-		let weatherCity = document.querySelector("#weather-city");
-		weatherCity.textContent = weatherData.name;
-	};
-
 	//panel buttons
 	let settingsBtn = document.querySelector("#settings-button");
 	settingsBtn.addEventListener("click", createSettingsPanel);
@@ -89,16 +84,3 @@ let weatherApp = (async function () {
 	weatherTemperature.addEventListener("click", showTemperature);
 	showTemperature();
 })();
-
-let upperize = (status) => {
-	status = status.split(" ");
-	let newStatus = [];
-	status.forEach((word) => {
-		word = word.split("");
-		word[0] = word[0].toUpperCase();
-		word = word.join("");
-		newStatus.push(word);
-	});
-	newStatus = newStatus.join(" ");
-	return newStatus;
-};
