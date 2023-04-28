@@ -13,7 +13,7 @@ export const WeatherCard = ({ city }: { city: string }) => {
         if (city) {
             WeatherService.getWeatherStatusFromCity(city).then(setWeatherData);
         }
-    });
+    }, []);
     return (
         <div className={styles["weather-card"]}>
             <div className={styles["weather-card__city"]}>
