@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
 import styles from "./DisplayInfo.module.css";
+import { calculateCelsius, calculateFahrenheit } from "../../utils/tools";
 
-export const DisplayInfo = () => {
+export const DisplayInfo = ({
+    data,
+    user,
+}: {
+    data: IWeatherData;
+    user: IUser;
+}) => {
     let [isCelsius, toggleUnit] = useState(true);
     let [actualTemperature, setActualTemperature] = useState(40);
-    
+
     useEffect(() => {
-        if (isCelsius) {
-            let celsius = (actualTemperature - 32) * (5 / 9);
+        if (user.scale === "celsius") {
+            let celsius = calculateCelsius(actualTemperature);
             setActualTemperature(celsius);
         } else {
-            let fahrenheit = actualTemperature * (9 / 5) + 32;
+            let fahrenheit = calculateFahrenheit(actualTemperature);
             setActualTemperature(fahrenheit);
         }
     }, [isCelsius]);
