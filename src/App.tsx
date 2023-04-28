@@ -21,7 +21,7 @@ function App() {
     return (
         <main className={styles["WeatherApp"]}>
             <section className={styles["weather-app__display"]}>
-                <MainDisplay city={user.mainCity} user={user}/>
+                <MainDisplay city={user.main__city} user={user}/>
             </section>
             <Router>
                 <header className={styles["weather-app__header"]}>
@@ -30,7 +30,7 @@ function App() {
                 <div className={styles["weather-app__panels"]}>
                     <Routes>
                         <Route path="weather" element={<WeatherMenu user={user} />} />
-                        <Route path="settings" element={<SettingsMenu user={user}  />} />
+                        <Route path="settings" element={<SettingsMenu user={user}  setUser={setUser}/>} />
                     </Routes>
                 </div>
             </Router>

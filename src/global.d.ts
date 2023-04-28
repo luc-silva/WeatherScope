@@ -11,7 +11,7 @@ declare module "*.jpg" {
 interface IUser {
     username: string;
     cities: string[];
-    mainCity: string;
+    main__city: string;
     scale: string;
 }
 
