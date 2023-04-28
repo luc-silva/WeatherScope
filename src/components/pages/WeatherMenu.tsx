@@ -1,21 +1,29 @@
 import { useState } from "react";
 import { WeatherCard } from "../cards/WeatherCard";
 
-import styles from "./WeatherMenu.module.css";
 import { SearchedCityCard } from "../cards/SearchedCityCard";
 import { WeatherMenuHeader } from "../misc/WeatherMenuHeader";
 
+import styles from "./WeatherMenu.module.css";
+
 export const WeatherMenu = ({ user }: { user: IUser }) => {
     let [searchCardActive, toggleSearchCard] = useState(false);
+    let [searchKeyword, setSearchKeyword] = useState("");
 
     return (
         <section className={styles["weather-menu"]}>
             <div className={styles["weather-menu__header"]}>
-                <WeatherMenuHeader />
+                <WeatherMenuHeader
+                    setSearchkeyword={setSearchKeyword}
+                    toggleCard={toggleSearchCard}
+                />
             </div>
             {searchCardActive && (
                 <div className={styles["weather-menu__search-result"]}>
-                    <SearchedCityCard city="" scale="" />
+                    <SearchedCityCard
+                        city={searchKeyword}
+                        toggle={toggleSearchCard}
+                    />
                 </div>
             )}
             <div className={styles["weather-menu__container"]}>
