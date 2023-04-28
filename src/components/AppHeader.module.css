@@ -1,7 +1,7 @@
-.weather-app-header{
+.header{
     width: 100%;
 }
-.weather-app-navigator {
+.header__navigation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,17 +12,20 @@
     border-bottom: 1px solid rgb(197, 196, 196);
     box-sizing: border-box;
 }
-.weather-app-navigator > ul {
+.header__navigation__links {
     display: flex;
     flex-direction: row;
     gap: 3rem;
 }
-.weather-app-navigator > ul > li,
+.header__navigation__links li,
 .settings-button {
     font-size: 1.2rem;
     color: rgb(55, 55, 55);
     height: 5vh;
     cursor: pointer;
+}
+.header__navigation__extras{
+    display: flex;
 }
 .settings-button {
     background-color: white;
