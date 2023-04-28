@@ -27,7 +27,7 @@ function App() {
                 <header className={styles["weather-app__header"]}>
                     <AppHeader />
                 </header>
-                <div>
+                <div className={styles["weather-app__panels"]}>
                     <Routes>
                         <Route path="weather" element={<WeatherMenu user={user} />} />
                         <Route path="settings" element={<SettingsMenu user={user}  />} />
