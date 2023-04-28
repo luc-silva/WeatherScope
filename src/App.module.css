@@ -20,3 +20,6 @@
 .weather-app__panels{
     width: 100%;
 }
+.weather-app__panels section{
+    min-height: 90vh;
+}
