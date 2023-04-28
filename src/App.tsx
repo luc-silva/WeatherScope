@@ -8,10 +8,12 @@ import styles from "./App.module.css";
 import { WeatherMenu } from "./components/pages/WeatherMenu";
 import { SettingsMenu } from "./components/pages/SettingsMenu";
 import { defaultUserSettings } from "./constants/defaultData";
+import { NewsMenu } from "./components/pages/NewsMenu";
+import { AgendaMenu } from "./components/pages/AgendaMenu";
 
 function App() {
     let [weatherData, setWeatherData] = useState({});
-    let [user, setUser] = useState(defaultUserSettings)
+    let [user, setUser] = useState(defaultUserSettings);
 
     /* useEffect(() => {
         //let data = getData();
@@ -21,7 +23,7 @@ function App() {
     return (
         <main className={styles["WeatherApp"]}>
             <section className={styles["weather-app__display"]}>
-                <MainDisplay city={user.main__city} user={user}/>
+                <MainDisplay city={user.main__city} user={user} />
             </section>
             <Router>
                 <header className={styles["weather-app__header"]}>
@@ -29,8 +31,21 @@ function App() {
                 </header>
                 <div className={styles["weather-app__panels"]}>
                     <Routes>
-                        <Route path="weather" element={<WeatherMenu user={user} />} />
-                        <Route path="settings" element={<SettingsMenu user={user}  setUser={setUser}/>} />
+                        <Route
+                            path="weather"
+                            element={<WeatherMenu user={user} />}
+                        />
+                        <Route
+                            path="settings"
+                            element={
+                                <SettingsMenu user={user} setUser={setUser} />
+                            }
+                        />
+                        <Route
+                            path="agenda"
+                            element={<AgendaMenu user={user} />}
+                        />
+                        <Route path="news" element={<NewsMenu />} />
                     </Routes>
                 </div>
             </Router>
