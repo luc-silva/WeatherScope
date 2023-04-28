@@ -23,7 +23,13 @@ interface WeatherStatus {
 }
 
 interface IWeatherData {
-    main: {};
+    main: {
+        temp: number;
+        feels_like: number;
+        humidity: number;
+        temp_min: number;
+        temp_max: number;
+    };
     name: string;
     weather: WeatherStatus[];
     sys: {

@@ -10,7 +10,7 @@ export const defaultUserSettings: IUser = {
     username: "user",
     cities: defaultCities,
     mainCity: "London",
-    scale: "celsius"
+    scale: "celsius",
 };
 
 export const initialWeatherStatus: WeatherStatus = {
@@ -21,7 +21,13 @@ export const initialWeatherStatus: WeatherStatus = {
 };
 
 export const initialWeatherData: IWeatherData = {
-    main: {},
+    main: {
+        feels_like: 0,
+        humidity: 0,
+        temp: 0,
+        temp_min: 0,
+        temp_max: 0,
+    },
     name: "",
     weather: [initialWeatherStatus],
     sys: {
