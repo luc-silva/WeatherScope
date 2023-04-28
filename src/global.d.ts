@@ -43,3 +43,9 @@ interface IWeatherData {
         gust: number;
     };
 }
+
+interface INews {
+    title: string;
+    createdAt: Date;
+    description: string;
+}
