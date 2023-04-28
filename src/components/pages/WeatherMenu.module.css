@@ -2,6 +2,9 @@
     width: 100%;
     color: rgb(55, 55, 55);
 }
+.weather-menu__header{
+    height: 8vh;
+}
 .weather-menu__search-result{
     width: 100%;
     height: 400px;
