@@ -1,0 +1,19 @@
+.WeatherApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8rem;
+}
+.weather-app__display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.weather-app__header{
+    width: 100%;
+    height: 10vh;
+}
