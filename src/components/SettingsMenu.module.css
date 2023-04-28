@@ -1,4 +1,4 @@
-.settings-container {
+.settings {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -8,20 +8,34 @@
     gap: 1.5rem;
     margin: 2rem 0;
 }
-.settings-container > div {
+.settings__title {
+    display: flex;
+}
+.settings__title h2 {
+    font-size: 1.5rem;
+}
+.settings__form__container {
+    display: flex;
+}
+.settings__form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 1rem;
 }
-.settings-container > div > input,
-.settings-container > div > select {
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+.input-container input,
+.input-container select {
     padding: 5px;
-    font-size: 1.3rem;
-    width: 50%;
     border-radius: 5px;
     background-color: whitesmoke;
     border: none;
 }
-select:focus {
+.input-container select:focus {
     outline: none;
+}
+.input-container input[type="text"] {
+    font-size: 1.3rem;
 }
