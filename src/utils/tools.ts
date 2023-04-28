@@ -22,7 +22,7 @@ export function calculateCelsiusToFahrenheit(value: number): number {
  * @param value number to calculate.
  * @returns Celsius respective value.
  */
-export function calculateKelvinToCelisuis(value:number):number{
+export function calculateKelvinToCelsius(value:number):number{
     return value - 273.15
 }
 

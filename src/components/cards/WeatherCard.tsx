@@ -1,5 +1,5 @@
 import {
-    calculateKelvinToCelisuis,
+    calculateKelvinToCelsius,
     calculateKelvinToFahrenheit,
 } from "../../utils/tools";
 import styles from "./WeatherCard.module.css";
@@ -16,7 +16,7 @@ export const WeatherCard = ({ data }: { data: IWeatherData }) => {
                     <span>{`${calculateKelvinToFahrenheit(
                         data.main.temp
                     ).toFixed(2)}F`}</span>
-                    <span>{`${calculateKelvinToCelisuis(data.main.temp).toFixed(
+                    <span>{`${calculateKelvinToCelsius(data.main.temp).toFixed(
                         2
                     )}C`}</span>
                 </div>
