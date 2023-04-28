@@ -1,5 +1,8 @@
-.header{
+.header {
     width: 100%;
+}
+.header a:visited {
+    color: rgb(55, 55, 55);
 }
 .header__navigation {
     display: flex;
@@ -7,7 +10,7 @@
     justify-content: space-between;
     height: 10vh;
     width: 100%;
-    
+
     padding: 1rem;
     border-bottom: 1px solid rgb(197, 196, 196);
     box-sizing: border-box;
@@ -17,14 +20,14 @@
     flex-direction: row;
     gap: 3rem;
 }
-.header__navigation__links li,
+.header__navigation__links li a,
 .settings-button {
     font-size: 1.2rem;
     color: rgb(55, 55, 55);
     height: 5vh;
     cursor: pointer;
 }
-.header__navigation__extras{
+.header__navigation__extras {
     display: flex;
 }
 .settings-button {
