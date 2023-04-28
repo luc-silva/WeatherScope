@@ -12,6 +12,7 @@
     font-size: 1.2rem;
 }
 .news-card__main em{
+    color: rgb(70, 70, 70);
     font-size: 0.9rem;
 }
 .news-card__body{
