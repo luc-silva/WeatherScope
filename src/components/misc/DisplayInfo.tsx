@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./DisplayInfo.module.css";
-import { calculateCelsius, calculateFahrenheit } from "../../utils/tools";
+import {
+    calculateKelvinToCelsius,
+    calculateKelvinToFahrenheit,
+} from "../../utils/tools";
 
 export const DisplayInfo = ({
     data,
@@ -10,17 +13,6 @@ export const DisplayInfo = ({
     user: IUser;
 }) => {
     let [isCelsius, toggleUnit] = useState(true);
-    let [actualTemperature, setActualTemperature] = useState(40);
-
-    useEffect(() => {
-        if (user.scale === "celsius") {
-            let celsius = calculateCelsius(actualTemperature);
-            setActualTemperature(celsius);
-        } else {
-            let fahrenheit = calculateFahrenheit(actualTemperature);
-            setActualTemperature(fahrenheit);
-        }
-    }, [isCelsius]);
 
     return (
         <>
@@ -33,8 +25,9 @@ export const DisplayInfo = ({
                         toggleUnit(!isCelsius);
                     }}
                 >
-                    {(isCelsius && `${actualTemperature.toFixed(2)} C`) ||
-                        `${actualTemperature.toFixed(2)} F`}
+                    {(isCelsius &&
+                        `${calculateKelvinToCelsius(data.main.temp).toFixed(2)} C`) ||
+                        `${calculateKelvinToFahrenheit(data.main.temp).toFixed(2)} F`}
                 </div>
             </div>
         </>
