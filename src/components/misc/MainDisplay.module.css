@@ -1,0 +1,41 @@
+.main-display{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.main-display__tip,
+.main-display__info {
+    margin: 1rem;
+}
+.main-display__tip {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    color: white;
+    animation: infinite displayTip 5s;
+}
+.main-display__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+    
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    
+    color: white;
+}
+.main-display__image {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.main-display__image > img {
+    width: 100%;
+    height: 100%;
+}

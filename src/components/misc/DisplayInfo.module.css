@@ -1,0 +1,18 @@
+
+.weather-city{
+	font-size: 1rem;
+}
+.weather-status-display{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+}
+.weather-status{
+	font-size: 1.2rem;
+}
+.weather-temperature{
+	font-weight: bold;
+	font-size: 4rem;
+	cursor: pointer;
+}
