@@ -6,9 +6,9 @@ class WeatherService {
     private UNIT_PARAM = "&units=";
     private CITY_PARAM = "&q=";
 
-    public async getWeatherStatusFromCity(unit: string, city: string) {
+    public async getWeatherStatusFromCity(city: string) {
         return await axios
-            .get(this.API_URL + this.UNIT_PARAM + unit + this.CITY_PARAM + city)
+            .get(this.API_URL + this.CITY_PARAM + city)
             .then(({ data }) => {
                 return data;
             });
