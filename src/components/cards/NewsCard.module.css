@@ -1,0 +1,22 @@
+.news-card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+.news-card__main{
+    display: flex;
+    justify-content: space-between;
+}
+.news-card__main h3{
+    font-size: 1.2rem;
+}
+.news-card__main em{
+    font-size: 0.9rem;
+}
+.news-card__body{
+    color: rgb(70, 70, 70);
+    font-size: 0.9rem;
+    text-align: justify;
+    width: 50%;
+}
