@@ -1,6 +1,6 @@
-import styles from "./WeatherMenuCard.module.css"
+import styles from "./WeatherCard.module.css";
 
-export const WeatherMenuCard = () => {
+export const WeatherCard = ({ data }: { data: IWeatherData }) => {
     return (
         <div className={styles["weather-card"]}>
             <span className={styles["weather-card-city"]}></span>
@@ -10,7 +10,9 @@ export const WeatherMenuCard = () => {
                     <span>24C</span>
                 </div>
             </div>
-            <div className={styles["weather-card-condition"]}>Clear Sky *logo*</div>
+            <div className={styles["weather-card-condition"]}>
+                Clear Sky *logo*
+            </div>
         </div>
     );
 };
