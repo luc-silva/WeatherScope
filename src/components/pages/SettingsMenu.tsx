@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import styles from "./SettingsMenu.module.css";
-import { defaultUserSettings } from "../constants/defaultData";
+import { defaultUserSettings } from "../../constants/defaultData";
 
 export const SettingsMenu = ({
     user,

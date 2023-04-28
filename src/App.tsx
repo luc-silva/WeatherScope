@@ -5,8 +5,8 @@ import { AppHeader } from "./components/AppHeader";
 import { MainDisplay } from "./components/misc/MainDisplay";
 
 import styles from "./App.module.css";
-import { WeatherMenu } from "./components/WeatherMenu";
-import { SettingsMenu } from "./components/SettingsMenu";
+import { WeatherMenu } from "./components/pages/WeatherMenu";
+import { SettingsMenu } from "./components/pages/SettingsMenu";
 import { defaultUserSettings } from "./constants/defaultData";
 
 function App() {
