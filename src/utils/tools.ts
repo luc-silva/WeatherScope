@@ -58,10 +58,16 @@ export function calculateFahrenheitToKelvin(value: number): number {
  * @returns Return modified string.
  */
 export function upperCaseFirstLetter(string: string) {
-    let words = string.split(" ");
-    return words.map((word: string) => {
-        let letters = word.split("");
-        letters[0] = letters[0].toUpperCase();
-        return letters.join("");
-    }).join(" ");
+    if (string) {
+        let words = string.split(" ");
+        return words
+            .map((word: string) => {
+                let letters = word.split("");
+                letters[0] = letters[0].toUpperCase();
+                return letters.join("");
+            })
+            .join(" ");
+    } else {
+        return "";
+    }
 }
