@@ -16,14 +16,13 @@ export function calculateCelsiusToFahrenheit(value: number): number {
     return value * (9 / 5) + 32;
 }
 
-
 /**
  * Converts given number in  kelvin to celsius.
  * @param value number to calculate.
  * @returns Celsius respective value.
  */
-export function calculateKelvinToCelsius(value:number):number{
-    return value - 273.15
+export function calculateKelvinToCelsius(value: number): number {
+    return value - 273.15;
 }
 
 /**
@@ -31,8 +30,8 @@ export function calculateKelvinToCelsius(value:number):number{
  * @param value number to calculate.
  * @returns Kelvin respective value.
  */
-export function calculateCelsiusToKelvin(value:number):number{
-    return value + 273.15
+export function calculateCelsiusToKelvin(value: number): number {
+    return value + 273.15;
 }
 
 /**
@@ -40,8 +39,8 @@ export function calculateCelsiusToKelvin(value:number):number{
  * @param value number to calculate.
  * @returns Fahrenheit respective value.
  */
-export function calculateKelvinToFahrenheit(value:number):number{
-    return (value - 273.15) * (9/5) + 32
+export function calculateKelvinToFahrenheit(value: number): number {
+    return (value - 273.15) * (9 / 5) + 32;
 }
 
 /**
@@ -49,6 +48,20 @@ export function calculateKelvinToFahrenheit(value:number):number{
  * @param value number to calculate.
  * @returns Kelvin respective value.
  */
-export function calculateFahrenheitToKelvin(value:number):number{
-    return value + 273.15
+export function calculateFahrenheitToKelvin(value: number): number {
+    return value + 273.15;
+}
+
+/**
+ * Modify the first letter of each word in a string.
+ * @param string string to modify.
+ * @returns Return modified string.
+ */
+export function upperCaseFirstLetter(string: string) {
+    let words = string.split(" ");
+    return words.map((word: string) => {
+        let letters = word.split("");
+        letters[0] = letters[0].toUpperCase();
+        return letters.join("");
+    }).join(" ");
 }
