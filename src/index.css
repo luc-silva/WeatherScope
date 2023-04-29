@@ -11,14 +11,3 @@ button {
     border: none;
     background-color: white;
 }
-@keyframes displayTip{
-    0% {
-        color: rgba(255, 255, 255, 0);
-    }
-    50% {
-        color: rgba(255, 255, 255, 0.85);
-    }
-    100% {
-        color: rgba(255, 255, 255, 0);
-    }
-}
