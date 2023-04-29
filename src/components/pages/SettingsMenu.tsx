@@ -1,6 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import styles from "./SettingsMenu.module.css";
-import { defaultUserSettings } from "../../constants/defaultData";
+import { SettingsForm } from "../forms/SettingsForm";
+import { UserSelectedCities } from "../misc/UserSelectedCities";
 
 export const SettingsMenu = ({
     user,
@@ -30,45 +31,17 @@ export const SettingsMenu = ({
             <div className={styles["settings__title"]}>
                 <h2>Settings</h2>
             </div>
-            <div className={styles["settings__form__container"]}>
-                <form
-                    action="POST"
-                    className={styles["settings__form"]}
-                    onSubmit={handleSubmit}
-                >
-                    <div className={styles["input-container"]}>
-                        <label htmlFor="username">Username</label>
-                        <input
-                            type="text"
-                            name="main-city"
-                            value={form.username}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div className={styles["input-container"]}>
-                        <label htmlFor="main__city">Default City</label>
-                        <input
-                            type="text"
-                            name="main__city"
-                            value={form.main__city}
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div className={styles["input-container"]}>
-                        <label htmlFor="scale">Scale</label>
-                        <select
-                            name="scale"
-                            value={form.scale}
-                            onChange={handleChange}
-                        >
-                            <option value="metric">metric</option>
-                            <option value="imperial">imperial</option>
-                        </select>
-                    </div>
-                    <div className={styles["input-container"]}>
-                        <input type="submit" value="Submit Changes" />
-                    </div>
-                </form>
+            <div className={styles["settings__main"]}>
+                <div className={styles["settings__form__container"]}>
+                    <SettingsForm
+                        onSubmit={handleSubmit}
+                        onChange={handleChange}
+                        form={form}
+                    />
+                </div>
+                <div className={styles["settings__cities__container"]}>
+                    <UserSelectedCities setUser={setUser} user={user}/>
+                </div>
             </div>
         </section>
     );

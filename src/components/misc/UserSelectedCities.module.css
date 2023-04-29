@@ -1,0 +1,11 @@
+.selected-cities__title {
+    display: flex;
+    flex-direction: column;
+}
+.selected-cities__container {
+    display: flex;
+    flex-direction: column;
+}
+.selected-cities__container {
+    gap: 0.5rem;
+}
