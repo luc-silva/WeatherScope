@@ -3,34 +3,38 @@
 Weather App made by me with Typescript and React as a project for The Odin Project curriculum.
 
 ## Project Pictures
-
-![weather-app](https://user-images.githubusercontent.com/100732316/209739095-9359cd94-d6d7-4f65-bc3b-d8718cf98104.png)
-![weather-app3](https://user-images.githubusercontent.com/100732316/209739110-cfc22195-03b9-4819-9e9c-bb9d2dcc1a5e.png)
+![weather-app-1](https://user-images.githubusercontent.com/100732316/235323502-abdad516-5273-4a66-ad0e-dea7ce014993.png)
+![weather-app-2](https://user-images.githubusercontent.com/100732316/235323505-d268ba5d-3c5d-4b13-b152-178edd9a47d4.png)
+![weather-app-3](https://user-images.githubusercontent.com/100732316/235323510-653c40e7-abf2-4c92-8679-994e2c8e41e8.png)
+![weather-app-4](https://user-images.githubusercontent.com/100732316/235323515-9357fcb3-324f-482f-a0b4-d6b909f1383c.png)
+![weather-app-5](https://user-images.githubusercontent.com/100732316/235323518-2ff3f593-aee3-47db-b6db-afd2bc736cd8.png)
 
 ## How to test it locally
 
 First, download the repository into your machine:
-``bash
-git clone https://github.com/luc-silva/weather-app``
+``` bash
+git clone https://github.com/luc-silva/weather-app
+```
 
 Go to project directory:
-``bash
-cd /home/[user]/[location]/weather-app``
+``` bash
+cd /home/[user]/[location]/weather-app
+```
 
 Install dependencies:
-``bash
-npm install``
+``` bash
+npm install
+```
 
 And then, start your localhost server:
-``bash
-npm start``
+``` bash
+npm start
+```
 
-## Plans for the future
+## Plans
+- Add databse and login system
 
-- Refactor the whole project
-
-### Credits for the images used
-
+### Credits
 - [@homeschool](https://unsplash.com/@homeschool) Thunderstorm,
 - [@bencollins](https://unsplash.com/@bencollins) Clear Sky,
 - [@justincron](https://unsplash.com/@justincron) Drizzle,
