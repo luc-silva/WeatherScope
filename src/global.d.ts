@@ -13,6 +13,7 @@ interface IUser {
     cities: string[];
     main__city: string;
     scale: string;
+    tasks: ITask[];
 }
 
 interface WeatherStatus {
@@ -42,6 +43,12 @@ interface IWeatherData {
         deg: number;
         gust: number;
     };
+}
+
+interface ITask {
+    concluded: boolean;
+    end_date: Date;
+    task: string;
 }
 
 interface INews {

@@ -43,7 +43,7 @@ function App() {
                         />
                         <Route
                             path="agenda"
-                            element={<AgendaMenu user={user} />}
+                            element={<AgendaMenu user={user} setUser={setUser}/>}
                         />
                         <Route path="news" element={<NewsMenu />} />
                     </Routes>

@@ -11,6 +11,7 @@ export const defaultUserSettings: IUser = {
     cities: defaultCities,
     main__city: "London",
     scale: "celsius",
+    tasks: [],
 };
 export const initialWeatherStatus: WeatherStatus = {
     id: "",

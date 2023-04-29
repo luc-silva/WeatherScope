@@ -1,0 +1,27 @@
+.agenda-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+.agenda-form__main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.input__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 50%;
+}
+.agenda-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: whitesmoke;
+}
+.submit-btn {
+    display: flex;
+    align-self: flex-end;
+}

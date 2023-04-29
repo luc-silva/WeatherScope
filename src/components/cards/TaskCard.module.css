@@ -1,0 +1,40 @@
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+.task-card__main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+}
+.task-card__main h3 {
+    font-size: 1.2rem;
+}
+.task__checkbox {
+    width: 15px;
+    height: 15px;
+
+    outline: rgb(192, 192, 192) solid 1px;
+    background-color: whitesmoke;
+}
+
+.task-card__details {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.details__time {
+    font-size: 0.9rem;
+}
+.details__icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discart-btn {
+    display: flex;
+}
