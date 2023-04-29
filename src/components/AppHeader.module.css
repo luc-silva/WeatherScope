@@ -1,5 +1,7 @@
 .header {
     width: 100%;
+    background-color: white;
+
 }
 .header a:visited {
     color: rgb(55, 55, 55);
@@ -20,13 +22,18 @@
     flex-direction: row;
     gap: 3rem;
 }
-.header__navigation__links li a,
+.link-item,
 .settings-button {
     font-size: 1.2rem;
     color: rgb(55, 55, 55);
     height: 5vh;
     cursor: pointer;
+    height: 100%;
 }
+.item--active {
+    font-weight: bolder;
+}
+
 .header__navigation__extras {
     display: flex;
 }
