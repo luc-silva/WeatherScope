@@ -22,7 +22,6 @@ export const AppHeader = () => {
                     </div>
                 </div>
             </nav>
-            {/* add search bar here */}
         </div>
     );
 };

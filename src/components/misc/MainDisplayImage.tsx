@@ -32,7 +32,7 @@ export const MainDisplayImage = ({
     }, [weatherStatus]);
     return (
         <>
-            <img src={currentImage} className={styles["background-image"]}/>;
+            <img src={currentImage} className={styles["background-image"]}/>
         </>
     );
 };
