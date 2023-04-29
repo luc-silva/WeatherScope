@@ -71,3 +71,12 @@ export function upperCaseFirstLetter(string: string) {
         return "";
     }
 }
+
+/**
+ * Converts the number to string and add a zero when necessary.
+ * @param value Number to format.
+ * @returns Formated number in string.
+ */
+export function formatTime(value: number): string {
+    return value < 10 ? `0${value}` : `${value}`;
+}
