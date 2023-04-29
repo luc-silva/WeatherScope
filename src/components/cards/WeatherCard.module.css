@@ -6,13 +6,15 @@
 
     padding: 1rem;
     width: 100%;
+    border-radius: 5px;
 
-    border-bottom: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
     animation-name: fade-in;
     animation-duration: 0.8s;
 }
 .weather-card:hover {
-    background-color: whitesmoke;
+    background-color: white;
 }
 .weather-card-city {
     display: flex;
@@ -38,6 +40,7 @@
 .weather-card__condition {
     display: flex;
     align-items: center;
+    text-align: center;
 }
 .weather-card__condition img {
     width: 30px;
