@@ -8,6 +8,7 @@ import dizzle from "../../img/drizzle.jpg";
 import raining from "../../img/raining.jpg";
 import snow from "../../img/snow.jpg";
 import thunderstorm from "../../img/thunderstorm.jpg";
+import mist from "../../img/mist.jpg";
 
 const weatherStatuses: { [key: string]: string } = {
     Rain: raining,
@@ -16,6 +17,7 @@ const weatherStatuses: { [key: string]: string } = {
     Snow: snow,
     Dizzle: dizzle,
     Clear: clear,
+    Mist: mist,
 };
 
 export const MainDisplayImage = ({
@@ -32,7 +34,7 @@ export const MainDisplayImage = ({
     }, [weatherStatus]);
     return (
         <>
-            <img src={currentImage} className={styles["background-image"]}/>
+            <img src={currentImage} className={styles["background-image"]} />
         </>
     );
 };
