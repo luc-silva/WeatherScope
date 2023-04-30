@@ -80,3 +80,20 @@ export function upperCaseFirstLetter(string: string) {
 export function formatTime(value: number): string {
     return value < 10 ? `0${value}` : `${value}`;
 }
+
+/**
+ * Converts given temperature in kelvin to selected scale.
+ * @param scale Scale to be converted to.
+ * @param value Value in kelvin to convert
+ * @returns Temperature converted to chosen scale.
+ */
+export function setWeather(scale: string, value: number): string | number {
+    switch (scale) {
+        case "metric":
+            return `${calculateKelvinToCelsius(value).toFixed(2)} °C`;
+        case "imperial":
+            return `${calculateKelvinToFahrenheit(value).toFixed(2)} °F`;
+        default:
+            return value;
+    }
+}

@@ -23,6 +23,7 @@ export const WeatherMenu = ({ user }: { user: IUser }) => {
                     <SearchedCityCard
                         city={searchKeyword}
                         toggle={toggleSearchCard}
+                        user={user}
                     />
                 </div>
             )}

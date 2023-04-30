@@ -12,9 +12,11 @@ import { SearchedCityCardErrorOverlay } from "../errorOverlays/SearchedCityCardE
 export const SearchedCityCard = ({
     city,
     toggle,
+    user
 }: {
     city: string;
     toggle: Function;
+    user:IUser
 }) => {
     let [weatherData, setWeatherData] = useState(initialWeatherData);
     let [isLoading, toggleLoading] = useState(true);
@@ -55,6 +57,7 @@ export const SearchedCityCard = ({
                         <div className={styles["status__metrics"]}>
                             <WeatherDataMetricsDisplay
                                 data={weatherData.main}
+                                user={user}
                             />
                         </div>
                         <div className={styles["status__temp"]}>
