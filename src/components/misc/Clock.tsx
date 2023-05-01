@@ -13,10 +13,11 @@ export const Clock = () => {
     }
 
     useEffect(() => {
-        setInterval(() => {
+        const interval = setInterval(() => {
             setTime(getTime());
         }, 3000);
-        return () => {};
+
+        return () => clearInterval(interval);
     }, []);
     return (
         <div className={styles["clock"]}>
