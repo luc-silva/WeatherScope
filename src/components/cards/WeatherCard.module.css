@@ -42,7 +42,7 @@
     align-items: center;
     text-align: center;
 }
-.weather-card__condition img {
+.weather-card__icon {
     width: 30px;
     height: 30px;
 }

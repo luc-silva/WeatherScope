@@ -12,7 +12,6 @@ export const TaskCard = ({
     remove: React.MouseEventHandler<HTMLDivElement>;
     changeStatus: React.MouseEventHandler<HTMLDivElement>;
 }) => {
-    console.log(taskDetails.end_date);
     return (
         <div className={styles["task-card"]}>
             <div className={styles["task-card__main"]}>

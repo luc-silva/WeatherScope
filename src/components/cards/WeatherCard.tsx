@@ -8,6 +8,7 @@ import styles from "./WeatherCard.module.css";
 import { initialWeatherData } from "../../constants/defaultData";
 import WeatherService from "../../services/WeatherService";
 import { WeatherCardErrorOverlay } from "../errorOverlays/WeatherCardErrorOverlay";
+import { WeatherImage } from "../misc/WeatherImage";
 
 export const WeatherCard = ({ city }: { city: string }) => {
     let [weatherData, setWeatherData] = useState(initialWeatherData);
@@ -52,9 +53,9 @@ export const WeatherCard = ({ city }: { city: string }) => {
                                     weatherData.weather[0].description
                                 )}
                             </p>
-                            <div>
-                                <img
-                                    src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+                            <div className={styles["weather-card__icon"]}>
+                                <WeatherImage
+                                    iconName={weatherData.weather[0].icon}
                                 />
                             </div>
                         </div>
