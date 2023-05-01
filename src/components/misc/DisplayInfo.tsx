@@ -31,10 +31,10 @@ export const DisplayInfo = ({
                     {(isCelsius &&
                         `${calculateKelvinToCelsius(data.main.temp).toFixed(
                             2
-                        )} C`) ||
+                        )} °C`) ||
                         `${calculateKelvinToFahrenheit(data.main.temp).toFixed(
                             2
-                        )} F`}
+                        )} °F`}
                 </div>
             </div>
         </>
