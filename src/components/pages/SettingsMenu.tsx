@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import styles from "./SettingsMenu.module.css";
 import { SettingsForm } from "../forms/SettingsForm";
 import { UserSelectedCities } from "../misc/UserSelectedCities";
+import { useNavigate } from "react-router-dom";
 
 export const SettingsMenu = ({
     user,
@@ -11,6 +12,7 @@ export const SettingsMenu = ({
     setUser: Function;
 }) => {
     let [form, setForm] = useState(user);
+    let navigate = useNavigate()
 
     function handleChange(event: ChangeEvent<HTMLElement>) {
         let target = event.target;
@@ -25,6 +27,7 @@ export const SettingsMenu = ({
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setUser(form);
+        navigate("/weather")
     }
     return (
         <section className={styles["settings"]}>

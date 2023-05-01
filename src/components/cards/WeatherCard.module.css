@@ -23,6 +23,9 @@
     width: 75%;
     color: rgb(57, 57, 57);
 }
+.loading-effect{
+    height: 1.2rem;
+}
 .weather-card__main {
     width: 25%;
     display: flex;

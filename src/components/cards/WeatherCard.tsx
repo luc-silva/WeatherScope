@@ -9,6 +9,7 @@ import { initialWeatherData } from "../../constants/defaultData";
 import WeatherService from "../../services/WeatherService";
 import { WeatherCardErrorOverlay } from "../errorOverlays/WeatherCardErrorOverlay";
 import { WeatherImage } from "../misc/WeatherImage";
+import { LoadingEffectLine } from "../misc/LoadingEffectLine";
 
 export const WeatherCard = ({ city }: { city: string }) => {
     let [weatherData, setWeatherData] = useState(initialWeatherData);
@@ -35,8 +36,18 @@ export const WeatherCard = ({ city }: { city: string }) => {
             {(isError && <WeatherCardErrorOverlay />) || (
                 <>
                     <div className={styles["weather-card__city"]}>
-                        <h3>{weatherData.name}</h3>
-                        <strong>{weatherData.sys.country}</strong>
+                        {(isLoading && (
+                            <>
+                                <div className={styles["loading-effect"]}>
+                                    <LoadingEffectLine />
+                                </div>
+                            </>
+                        )) || (
+                            <>
+                                <h3>{weatherData.name}</h3>
+                                <strong>{weatherData.sys.country}</strong>
+                            </>
+                        )}
                     </div>
                     <div className={styles["weather-card__main"]}>
                         <div className={styles["weather-card__status"]}>
