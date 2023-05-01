@@ -20,7 +20,7 @@ export const SettingsMenu = ({
             target instanceof HTMLInputElement ||
             target instanceof HTMLSelectElement
         ) {
-            setForm({ ...user, [target.name]: target.value });
+            setForm({ ...form, [target.name]: target.value });
         }
     }
 

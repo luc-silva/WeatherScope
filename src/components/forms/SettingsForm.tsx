@@ -26,7 +26,7 @@ export const SettingsForm = ({
                 />
             </div>
             <div className={styles["input-container"]}>
-                <label htmlFor="main__city">Default City</label>
+                <label htmlFor="main__city">Default Location</label>
                 <input
                     type="text"
                     name="main__city"
