@@ -1,3 +1,4 @@
+import { Thermometer, ThermometerCold, UmbrellaSimple } from "phosphor-react";
 import { setWeather } from "../../utils/tools";
 import styles from "./WeatherDataMetricsDisplay.module.css";
 
@@ -11,16 +12,25 @@ export const WeatherDataMetricsDisplay = ({
     return (
         <>
             <span className={styles["card-status__item"]}>
-                <strong>Humidity:</strong>
-                <p>{data.humidity}%</p>
+                <UmbrellaSimple size={20} weight="bold" />
+                <div>
+                    <strong>Humidity:</strong>
+                    <p>{data.humidity}%</p>
+                </div>
             </span>
             <span className={styles["card-status__item"]}>
-                <strong>Temp Min:</strong>
-                <p>{setWeather(user.scale, data.temp_min)}</p>
+                <ThermometerCold size={20} weight="bold" />
+                <div>
+                    <strong>Temp Min:</strong>
+                    <p>{setWeather(user.scale, data.temp_min)}</p>
+                </div>
             </span>
             <span className={styles["card-status__item"]}>
-                <strong>Temp Max:</strong>
-                <p>{setWeather(user.scale, data.temp_max)}</p>
+                <Thermometer size={20} weight="bold" />
+                <div>
+                    <strong>Temp Max:</strong>
+                    <p>{setWeather(user.scale, data.temp_max)}</p>
+                </div>
             </span>
         </>
     );
