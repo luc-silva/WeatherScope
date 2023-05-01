@@ -9,11 +9,24 @@ import styles from "./MainDisplay.module.css";
 
 export const MainDisplay = ({ city, user }: { city: string; user: IUser }) => {
     let [weatherData, setWeatherData] = useState(initialWeatherData);
+    let [isError, toggleError] = useState(false);
 
     useEffect(() => {
-        WeatherService.getWeatherStatusFromCity(city).then((data) => {
-            setWeatherData(data);
-        });
+        const fetchData = () => {
+            WeatherService.getWeatherStatusFromCity(city)
+                .then((data) => {
+                    setWeatherData(data);
+                    toggleError(false);
+                })
+                .catch(() => {
+                    toggleError(true);
+                });
+        };
+
+        fetchData();
+        let interval = setInterval(fetchData, 300000);
+
+        return () => clearInterval(interval);
     }, [city]);
     return (
         <div className={styles["main-display"]}>
@@ -21,10 +34,14 @@ export const MainDisplay = ({ city, user }: { city: string; user: IUser }) => {
                 Click above the temperature to change its format
             </span>
             <div className={styles["main-display__image"]}>
-                <MainDisplayImage weatherStatus={weatherData.weather[0].main}/>
+                <MainDisplayImage weatherStatus={weatherData.weather[0].main} />
             </div>
             <div className={styles["main-display__info"]}>
-                <DisplayInfo data={weatherData} user={user} />
+                {(isError && (
+                    <strong>
+                        Error while processing the data. Try changing the location.
+                    </strong>
+                )) || <DisplayInfo data={weatherData} user={user} />}
             </div>
         </div>
     );
