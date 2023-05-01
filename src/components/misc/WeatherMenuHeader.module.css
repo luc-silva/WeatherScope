@@ -9,8 +9,25 @@
 }
 .menu-header__search-box {
     height: 100%;
-    width: 40%;
+    width: 80%;
 }
 .menu-header__clock {
-    width: 10%;
+    width: fit-content;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-header__search-box {
+        height: 100%;
+        width: 40%;
+    }
+    .menu-header__clock {
+        width: 10%;
+    }
+}
+@media (min-width: 1025px) {
+    .menu-header__search-box {
+        width: 40%;
+    }
+    .menu-header__clock {
+        width: 10%;
+    }
 }

@@ -13,21 +13,38 @@
 .settings__title h2 {
     font-size: 1.5rem;
 }
-.settings__main{
+.settings__main {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 1rem;
     width: 100%;
 }
 .settings__form__container {
     width: 100%;
     display: flex;
 }
-.settings__cities__container{
+.settings__cities__container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
     background-color: whitesmoke;
     border-radius: 5px;
-
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .settings {
+        padding: 1rem 3rem;
+    }
+    .settings__main {
+        flex-direction: row;
+    }
+}
+@media (min-width: 1025px) {
+    .settings {
+        padding: 1rem 3rem;
+    }
+    .settings__main {
+        flex-direction: row;
+    }
 }

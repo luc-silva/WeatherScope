@@ -1,18 +1,27 @@
-
-.weather-city{
-	font-size: 1rem;
+.weather-city {
+    font-size: 1rem;
 }
-.weather-status-display{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 1rem;
+.weather-status-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
 }
-.weather-status{
-	font-size: 1.2rem;
+.weather-status {
+    font-size: 1.2rem;
 }
-.weather-temperature{
-	font-weight: bold;
-	font-size: 4rem;
-	cursor: pointer;
+.weather-temperature {
+    font-weight: bold;
+    font-size: 3rem;
+    cursor: pointer;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.weather-temperature {
+        font-size: 4rem;
+    }
+}
+@media (min-width: 1025px) {
+    .weather-temperature {
+        font-size: 4rem;
+    }
 }

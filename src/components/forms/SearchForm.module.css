@@ -9,11 +9,27 @@
     padding: 0 0.5rem;
 }
 .search-form > input[type="text"] {
-    width: 85%;
+    width: 70%;
     padding: 0 0.5rem;
     background-color: whitesmoke;
 }
 .search-form > input[type="submit"] {
-    width: 15%;
+    width: 30%;
     background-color: whitesmoke;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .search-form > input[type="text"] {
+        width: 80%;
+    }
+    .search-form > input[type="submit"] {
+        width: 20%;
+    }
+}
+@media (min-width: 1025px) {
+    .search-form > input[type="text"] {
+        width: 85%;
+    }
+    .search-form > input[type="submit"] {
+        width: 15%;
+    }
 }
